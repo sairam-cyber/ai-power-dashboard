@@ -1,0 +1,24 @@
+/* app/components/layout/Layout.module.css */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.mainContent {
+    flex-grow: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+    
+    .mainContent {
+        padding: 1rem;
+        height: calc(100vh - 60px); /* Account for mobile sidebar */
+    }
+}

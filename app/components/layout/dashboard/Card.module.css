@@ -1,0 +1,65 @@
+/* app/components/dashboard/Card.module.css */
+.card {
+    background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--primary-gradient);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    color: var(--primary-color);
+}
+
+.title {
+    font-size: 1rem;
+    color: var(--text-secondary);
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.change {
+    color: #10b981;
+    font-weight: bold;
+}
+
+.period {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}

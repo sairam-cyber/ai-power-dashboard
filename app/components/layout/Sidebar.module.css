@@ -1,0 +1,160 @@
+/* app/components/layout/Sidebar.module.css */
+.sidebar {
+    width: 250px;
+    background-color: var(--surface-dark);
+    height: 100vh;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid var(--border-color);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+    color: var(--primary-color);
+}
+
+.logoText {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navItem:hover {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.navItem.active {
+    background-color: var(--primary-color);
+    color: var(--text-primary);
+}
+
+.userSection {
+    margin-top: auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.userAvatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--primary-gradient);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.userDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.userName {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.userRole {
+    color: var(--text-secondary);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logoutButton {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.logoutButton:hover {
+    color: #ef4444;
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        min-height: 60px;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+    
+    .logo {
+        margin-bottom: 0;
+    }
+    
+    .logoText {
+        font-size: 1.2rem;
+    }
+    
+    .nav {
+        display: none; /* Hide navigation on mobile - could be replaced with hamburger menu */
+    }
+    
+    .userSection {
+        margin-top: 0;
+        padding-top: 0;
+        border-top: none;
+        flex-shrink: 0;
+    }
+    
+    .userInfo {
+        gap: 0.5rem;
+    }
+    
+    .userDetails {
+        display: none; /* Hide user details on mobile to save space */
+    }
+}

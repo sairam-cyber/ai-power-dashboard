@@ -1,0 +1,286 @@
+/* app/analytics/analytics.module.css */
+.page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  background: #0F172A;
+  color: #F8FAFC;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.controls {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filterButton {
+  background: #1E293B;
+  color: #F8FAFC;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background: #334155;
+  border-color: #667eea;
+}
+
+.timeSelect {
+  background: #1E293B;
+  color: #F8FAFC;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.timeSelect:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.filtersPanel {
+  background: #1E293B;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: end;
+}
+
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filterGroup label {
+  color: #94A3B8;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.dateInputs {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dateInput {
+  background: #0F172A;
+  color: #F8FAFC;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.5rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.dateInput:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.metricSelect {
+  background: #0F172A;
+  color: #F8FAFC;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  min-width: 120px;
+}
+
+.metricSelect:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.metricCard {
+  background: linear-gradient(135deg, #1E293B 0%, #334155 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.metricCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.15);
+}
+
+.metricIcon {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.metricContent h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 0.9rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 0.25rem 0;
+  color: #F8FAFC;
+}
+
+.metricChange {
+  font-size: 0.85rem;
+  color: #10b981;
+  font-weight: 500;
+}
+
+.chartsSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  gap: 2rem;
+}
+
+.chartCard {
+  background: #1E293B;
+  border-radius: 16px;
+  padding: 2rem;
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.chartCard:hover {
+  transform: translateY(-1px);
+}
+
+.chartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.chartControls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.chartButton {
+  background: transparent;
+  color: #94A3B8;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.chartButton:hover {
+  color: #F8FAFC;
+  border-color: #667eea;
+}
+
+.chartButton.active {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.legendContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+.legendColor {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+.chartCard h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #E2E8F0;
+  font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 2rem;
+  }
+  
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chartsSection {
+    grid-template-columns: 1fr;
+  }
+}
